@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curso - Design Multimídia</title>
+		<meta charset="utf-8">
+
+		<!-- <link rel="stylesheet" type="text/css" href="css/normalize.css"> -->
+
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	</head>
+	<body>
+
+		<div id="container">
+			
+			<header>
+				<div id="logo">
+					<h1><a href=""><img src="img/logo-calabria.png"></a></h1>
+				</div>
+
+				<nav>
+					<ul>
+						<li class="nav-galeria"><a href="index.html">Home</a></li>
+						<li class="nav-galeria"><a href="sobre-curso.html">Sobre o Curso</a></li>
+				        <li class="nav-galeria"><a href="galeria.html">Galeria</a></li>
+				        <li class="nav-galeria"><a href="contato.html">Contato</a></li>
+				        <li class="nav-galeria"><a href="inscricao.html">Inscrição</a></li>
+				        <li class="nav-galeria"><a href="sobre-devs.html">sobre os devs</a></li>
+					</ul>
+				</nav>
+
+			</header>
+
+			<div id="principal">
+				
+				
+
+					<section id="galeria">
+						<h4 class="galeria-t">Galeria de fotos</h4>
+						
+						<a href="">
+							<img src="img/imagem1.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem2.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem1.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem2.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem3.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem4.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem1.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem2.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem3.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem4.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem1.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem2.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem3.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<img src="img/imagem4.jpg" height="93" width="93">
+						</a>
+
+						<a href="">
+							<label class="picture" for="picture_input">
+ 								<span class="picture_image"></span>
+							</label>
+
+							<input type="file" name="picture_input" id="picture_input">
+						</a>
+
+						<a href="">
+							<label class="picture2" for="picture_input2">
+ 								<span class="picture_image2"></span>
+							</label>
+
+							<input type="file" name="picture_input2" id="picture_input2">
+						</a>
+
+						
+
+				<footer>
+					<p class="foot-galeria">
+						<a href="index.html">Home</a>
+						<a href="sobre-curso.html">Sobre o Curso</a>
+				        <a href="galeria.html">Galeria</a>
+				        <a href="contato.html">Contato</a>
+				        <a href="inscricao.html">Inscrição</a>
+				        <a href="sobre-devs.html">Sobre os Devs</a>
+					</p>
+					<p class="copy-galeria">
+						2022 AJT|CO  - Todos os direitos reservados.
+					</p>
+				</footer>
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			const inputFile = document.querySelector("#picture_input");
+			const pictureImage = document.querySelector(".picture_image");
+			const pictureImageTxt = "Choose an image";
+			pictureImage.innerHTML = pictureImageTxt;
+
+			inputFile.addEventListener("change", function (e) {
+			  const inputTarget = e.target;
+			  const file = inputTarget.files[0];
+
+			  if (file) {
+			    const reader = new FileReader();
+
+			    reader.addEventListener("load", function (e) {
+			      const readerTarget = e.target;
+
+			      const img = document.createElement("img");
+			      img.src = readerTarget.result;
+			      img.classList.add("picture_img");
+
+			      pictureImage.innerHTML = "";
+			      pictureImage.appendChild(img);
+			    });
+
+			    reader.readAsDataURL(file);
+			  } else {
+			    pictureImage.innerHTML = pictureImageTxt;
+			  }
+			});
+			
+			const inputFile = document.querySelector("#picture_input2");
+			const pictureImage = document.querySelector(".picture_image2");
+			const pictureImageTxt = "Choose an image";
+			pictureImage.innerHTML = pictureImageTxt;
+
+			inputFile.addEventListener("change", function (e) {
+			  const inputTarget = e.target;
+			  const file = inputTarget.files[0];
+
+			  if (file) {
+			    const reader = new FileReader();
+
+			    reader.addEventListener("load", function (e) {
+			      const readerTarget = e.target;
+
+			      const img = document.createElement("img");
+			      img.src = readerTarget.result;
+			      img.classList.add("picture_img2");
+
+			      pictureImage.innerHTML = "";
+			      pictureImage.appendChild(img);
+			    });
+
+			    reader.readAsDataURL(file);
+			  } else {
+			    pictureImage2.innerHTML = pictureImageTxt;
+			  }
+			});
+
+		</script>
+
+	</body>
+
+</html>

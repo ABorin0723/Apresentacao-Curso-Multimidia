@@ -1,0 +1,282 @@
+/* Estrutura do site
+------------------------------------ */
+body {
+	background: #f4f2ec url(../img/fundo.png) repeat-x;
+	font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	background-color: #F3F3FF;
+}
+
+#container {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+a:link, a:active, a:visited {
+	color: #fff;
+	font-size: 13.5px;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0350AE;
+}
+
+/* Logo 
+------------------------------------ */
+#logo h1 {
+	float: left;
+}
+
+#logo a img{
+	width: 100px;
+	height: 60px;
+	margin-left: 60px;
+	
+}
+
+
+/* Barra de navegação 
+------------------------------------ */
+header {
+	padding: 15px 0;
+	height: 55px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 20px;
+	float: right;
+}
+
+nav ul li {
+	float: left;
+	padding: 20px 0 0 0;
+}
+
+nav ul li a:link {
+	display: block;
+	margin-right: 25px;
+	padding-bottom: 1px;
+	text-transform: uppercase;
+}
+
+nav ul li a:hover {
+	border-bottom: 1px solid #0350AE;
+}
+/* Slider
+-------------------------------------*/
+
+.slider-frame {
+	overflow: hidden;
+	height: 400px;
+	width: 710px;
+	border: 1px solid #fff;
+	box-shadow: 5px 5px 2px 2px rgba(2, 100, 129, 0.1);
+}
+
+@keyframes slide_animation {
+	0% {left: 980px;}
+	10% {left: 980px;}
+    20% {left: 1690px;}
+    30% {left: 1690px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1690px;}
+    70% {left: 1690px;}
+    80% {left: 980px;}
+    90% {left: 980px;}
+    100% {left: 980px;}
+}
+
+.slide-images {
+	width: 3600px;
+	height: 800px;
+	margin: 0 0 0 -2400px;
+	position: relative;
+	animation-name: slide_animation;
+	animation-duration: 25s;
+	animation-iteration-count: infinite;
+	animation-delay: 0;
+}
+
+.img-container {
+	height: 400px;
+	width: 710px;
+	position: relative;
+	float: left;
+}
+.img-container img{
+	width: 710px;
+	height: 400px;
+}
+
+
+/* Principal 
+------------------------------------ */
+#conteudo {
+	width: 710px;
+	float: left;
+	margin-bottom: 20px;
+}
+#principal{
+	margin-top: 35px;
+}
+
+aside {
+	width: 350px;
+	float: right;
+	background: #ebe7dd;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
+}
+#depoimento img{
+	width: 350px;
+	height: 350px;
+}
+section#visita {
+	background: #cdc8b1;
+	padding: 10px 27px 27px 27px;
+	margin-top: 10px;
+}
+
+section#galeria {
+	padding: 0 27px 0 27px;
+}
+
+section#galeria a {
+	display: block;
+	background: url(../img/fundo-foto.png) no-repeat;
+	float: left;
+	padding: 17px 15px 17px 15px;
+	margin: 10px 0 0 20px;
+}
+
+section#galeria img {
+	margin-left: 2px;
+	margin-top: 3px;
+}
+
+article#video {
+	float: left;
+	width: 310px;
+	margin-left: 25px;
+}
+
+article#mapa {
+	float: left;
+	width: 310px;
+	margin-left: 37px;
+}
+
+article#exposicoes {
+	float: left;
+	width: 310px;
+	margin: 15px 0 0 25px;
+}
+
+article#historia {
+	float: left;
+	width: 310px;
+	margin: 15px 0 0 37px;
+}
+
+h3 {
+	color: #0350AE;
+	font-size: 1.0em;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+h4 {
+	color: #86521a;
+	text-transform: uppercase;
+	padding-bottom: 3px;
+	margin-bottom: 0;
+}
+
+/* Rodapé
+------------------------------------ */
+footer {
+	clear: both;
+	padding: 20px 0 30px 0;
+	text-align: center;
+	background: url(../img/fundo-rodape.png) no-repeat center top;
+	margin-top: 20px;
+}
+
+footer>p a {
+	padding: 2px 10px;
+}
+
+
+/* Formulários
+------------------------------------ */
+button {
+	height: 20px;
+	width: 80px;
+	background: #fff;
+	border: none;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+button label{
+	cursor: pointer;
+}
+button.campo {
+	border:1px solid #ada484;
+}
+
+button.botao {
+	background: #9b9271;
+	color: white;
+	width: 100%;
+	height: 40px;
+	font-size: 1.2em;
+	transition: all .4s;
+}
+button.botao:hover{
+	background: #897c4e;
+}
+fieldset {
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+/* Página Galeria
+------------------------------*/
+.galeria-t{
+	margin: 0 0 50px 0;
+}
+.nav-galeria{
+	padding: 30px 0 0 0;
+}
+.foot-galeria{
+	margin: 0 auto;
+	width: 700px;
+}
+.copy-galeria{
+	text-align: center;
+	width: 300px;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+/*juanito jones fodas*/
+
+.beatbox a {
+	color: #BA9F4C;
+}
+
+/*galeria*/
+
+a input{
+	display: none;
+}

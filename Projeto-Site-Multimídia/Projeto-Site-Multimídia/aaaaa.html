@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+	</title>
+
+	<style type="text/css">
+		input{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<a href="">
+							<label class="picture" for="picture_input">
+ 								<span class="picture_image"></span>
+							</label>
+
+							<input type="file" name="picture_input" id="picture_input">
+						</a>
+
+
+
+
+						<a href="">
+							<label class="picture2" for="picture_input2">
+ 								<span class="picture_image2"></span>
+							</label>
+
+							<input type="file" name="picture_input2" id="picture_input2">
+						</a>
+
+
+
+<script type="text/javascript">
+			const inputFile = document.querySelector("#picture_input");
+			const pictureImage = document.querySelector(".picture_image");
+			const pictureImageTxt = "Choose image";
+			pictureImage.innerHTML = pictureImageTxt;
+
+			inputFile.addEventListener("change", function (e) {
+			  const inputTarget = e.target;
+			  const file = inputTarget.files[0];
+
+			  if (file) {
+			    const reader = new FileReader();
+
+			    reader.addEventListener("load", function (e) {
+			      const readerTarget = e.target;
+
+			      const img = document.createElement("img");
+			      img.src = readerTarget.result;
+			      img.classList.add("picture_img");
+
+			      pictureImage.innerHTML = "";
+			      pictureImage.appendChild(img);
+			    });
+
+			    reader.readAsDataURL(file);
+			  } else {
+			    pictureImage.innerHTML = pictureImageTxt;
+			  }
+			});
+			
+
+			const inputFile2 = document.querySelector("#picture_input2");
+			const pictureImage2 = document.querySelector(".picture_image2");
+			const pictureImageTxt2 = "Choose an image";
+			pictureImage2.innerHTML = pictureImageTxt2;
+
+			inputFile2.addEventListener("change", function (ee) {
+			  const inputTarget2 = e.target2;
+			  const file2 = inputTarget2.files[0];
+
+			  if (file2) {
+			    const reader2 = new FileReader2();
+
+			    reader2.addEventListener("load", function (ee) {
+			      const readerTarget2 = e.target2;
+
+			      const img2 = document.createElement("img2");
+			      img2.src = readerTarget2.result;
+			      img2.classList.add("picture_img2");
+
+			      pictureImage2.innerHTML = "";
+			      pictureImage2.appendChild(img2);
+			    });
+
+			    reader2.readAsDataURL(file2);
+			  } else {
+			    pictureImage2.innerHTML = pictureImageTxt2;
+			  }
+			});
+			
+
+		</script>
+</body>
+</html>
